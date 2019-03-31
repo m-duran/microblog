@@ -23,3 +23,5 @@ htmlcov/
 *,cover
 
 venv/
+app.db
+

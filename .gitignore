@@ -24,4 +24,4 @@ htmlcov/
 
 venv/
 app.db
-
+*.db

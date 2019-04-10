@@ -1,0 +1,6 @@
+venv
+*.db
+*/*.db
+logs
+.gitignore
+__pycache__

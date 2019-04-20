@@ -16,7 +16,14 @@ services:
       - "5000:5000"
     environment:
       - FLASK_ENV=development
+      - SECRET_KEY=${SECRET_KEY}
+      - SQLALCHEMY_DATABASE_URI=${SQLALCHEMY_DATABASE_URI}
       - MS_TRANSLATOR_KEY=${MS_TRANSLATOR_KEY}
-      - ELASTICSEARCH_URL=${ELASTICSEARCH_URL}
+      - ELASTICSEARCH_URL=elasticsearch
+      - MAIL_SERVER=${MAIL_SERVER}
+      - MAIL_PORT=${MAIL_PORT}
+      - MAIL_USE_TLS=${MAIL_USE_TLS}
+      - MAIL_USERNAME=${MAIL_USERNAME}
+      - MAIL_PASSWORD=${MAIL_PASSWORD}
     depends_on:
-      - elasticsearch
+          - elasticsearch

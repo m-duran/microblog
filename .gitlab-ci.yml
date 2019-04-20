@@ -3,4 +3,4 @@ test:
   script:
     - pip install -r requirements.txt
     - coverage run --source=app/ -m pytest tests.py
-    - coverage xml
+    - coverage report

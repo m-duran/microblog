@@ -1,7 +1,6 @@
-before_script:
-  - docker info
-
-build_image:
+test:
   script:
-    - docker build -t microblog .
-    - docker run microblog python -m unittest discover
+    - apt-get update -qy
+    - apt-get install -y python-dev python-pip
+    - pip install -r requirements.txt
+    - python -m unittest discover

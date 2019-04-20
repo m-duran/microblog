@@ -15,11 +15,11 @@ RUN pip install gunicorn
 
 COPY app app
 COPY migrations migrations
-COPY microblog.py config.py boot.sh ./
+COPY microblog.py config.py tests.py boot.sh ./
 RUN chmod +x boot.sh
 
 RUN chown -R microblog:microblog ./
 
 USER microblog
 
-ENTRYPOINT [ "./boot.sh" ]
+CMD [ "./boot.sh" ]

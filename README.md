@@ -1,4 +1,6 @@
 # Microblog
+[![pipeline status](https://gitlab.com/m_duran/flask-test/badges/master/pipeline.svg)](https://gitlab.com/m_duran/flask-test/commits/master)
+[![coverage report](https://gitlab.com/m_duran/flask-test/badges/master/coverage.svg)](https://gitlab.com/m_duran/flask-test/commits/master)  
 A micro blog application. Based on the [Flask Megatutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world).
 
 ## Configuration Variables

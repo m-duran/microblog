@@ -10,6 +10,9 @@ services:
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
     command: elasticsearch -Etransport.host=127.0.0.1
 
+  redis:
+    image: redis:5.0.4-alpine
+
   flask-app:
     build: .
     ports:
@@ -25,5 +28,7 @@ services:
       - MAIL_USE_TLS=${MAIL_USE_TLS}
       - MAIL_USERNAME=${MAIL_USERNAME}
       - MAIL_PASSWORD=${MAIL_PASSWORD}
+      - REDIS_URL=redis
     depends_on:
-          - elasticsearch
+      - elasticsearch
+      - redis
